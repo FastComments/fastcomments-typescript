@@ -50,7 +50,7 @@ export interface FastCommentsConfig {
   allowAnon?: boolean
   /** Disables adding images. (Customizable via the UI.) */
   noImageUploads?: boolean
-  /** locale, valid values are en-us, fr-fr, se-se */
+  /** locale, valid values are 'en_us', 'es_es', 'fr_fr', 'pl_pl', 'de_de', 'it_it' */
   locale?: string
   /** Whether or not the comment count should include all comments instead of just the top-level ones */
   countAll?: boolean
