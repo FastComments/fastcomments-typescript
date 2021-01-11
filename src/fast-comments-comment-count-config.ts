@@ -5,6 +5,6 @@ export interface FastCommentsCommentCountConfig {
   urlId?: string
   /** Only render the number, not any text. */
   numberOnly?: boolean
-  /** Set the count as being live. */
+  /** Set the count as being live. Default is false. */
   isLive?: boolean
 }
