@@ -11,7 +11,7 @@ export interface FastCommentsSSO {
   loginURL?: string
 }
 
-export interface FastCommentsConfig {
+export interface FastCommentsCommentWidgetConfig {
   /** Id that represents you as a customer. */
   tenantId: string
   /** Id that represents the page, if you don't want to tie comments to the page url. Could be a URL or an ID (like an article id). */
