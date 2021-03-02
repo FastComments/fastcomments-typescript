@@ -11,6 +11,17 @@ export interface FastCommentsSSO {
   loginURL?: string
 }
 
+export interface FastCommentsSSOSimple {
+  /** This must be unique when paired with an email. */
+  username: string
+  /** The user's email. We'll send welcome and verification emails to this address. **/
+  email?: string
+  /** The user's avatar. **/
+  avatarSrc?: string
+  /** The user's website, blog, or personal account page. We'll link their username to this. **/
+  websiteUrl?: string
+}
+
 export interface FastCommentsCommentWidgetConfig {
   /** Id that represents you as a customer. */
   tenantId: string
@@ -58,4 +69,6 @@ export interface FastCommentsCommentWidgetConfig {
   showLiveRightAway?: boolean
   /** SSO Configuration. For an unauthenticated user, do not define userDataJSONBase64 and verificationHash. See <a href="https://blog.fastcomments.com/(4-13-2020)-setting-up-sso-with-fastcomments" target="_blank">the documentation</a>. */
   sso?: FastCommentsSSO
+  /** Simple SSO Configuration, less secure than "sso". See <a href="https://docs.fastcomments.com" target="_blank">the documentation</a>. */
+  simpleSSO?: FastCommentsSSOSimple
 }
