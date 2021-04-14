@@ -4,7 +4,7 @@ export interface FastCommentsSSO {
   /** The HMAC-SHA256 hash of the userDataJSONBase64 field, using your secret key. Leave empty for an unauthenticated user. */
   verificationHash: string
   /** The timestamp of when the verificationHash was created. */
-  timestamp: string
+  timestamp: number
   /** The logout URL for the user. If you define the SSO configuration, but not this, the logout link won't be shown. */
   logoutURL?: string
   /** The login URL for the user, which will show if they try to comment and they are not authenticated. */
