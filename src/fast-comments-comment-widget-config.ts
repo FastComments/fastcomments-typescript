@@ -67,8 +67,8 @@ export interface FastCommentsCommentWidgetConfig {
   countAll?: boolean
   /** Whether or not to show comments right away, without having to click "show N comments". */
   showLiveRightAway?: boolean
-  /** SSO Configuration. For an unauthenticated user, do not define userDataJSONBase64 and verificationHash. See <a href="https://blog.fastcomments.com/(4-13-2020)-setting-up-sso-with-fastcomments" target="_blank">the documentation</a>. */
+  /** SSO Configuration. For an unauthenticated user, do not define userDataJSONBase64 and verificationHash. See <a href="https://docs.fastcomments.com/guide-customizations-and-configuration.html#sso" target="_blank">the documentation</a>. */
   sso?: FastCommentsSSO
-  /** Simple SSO Configuration, less secure than "sso". See <a href="https://docs.fastcomments.com" target="_blank">the documentation</a>. */
+  /** Simple SSO Configuration, less secure than "sso". See <a href="https://docs.fastcomments.com/guide-customizations-and-configuration.html#option-two---simple-sso" target="_blank">the documentation</a>. */
   simpleSSO?: FastCommentsSSOSimple
 }
