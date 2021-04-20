@@ -1,3 +1,5 @@
+import {Comment} from "./fast-comments-comment";
+
 export interface FastCommentsSSO {
   /** The user's data represented as JSON, and then Base64'd. Leave empty for an unauthenticated user. */
   userDataJSONBase64: string
@@ -70,5 +72,13 @@ export interface FastCommentsCommentWidgetConfig {
   /** SSO Configuration. For an unauthenticated user, do not define userDataJSONBase64 and verificationHash. See <a href="https://docs.fastcomments.com/guide-customizations-and-configuration.html#sso" target="_blank">the documentation</a>. */
   sso?: FastCommentsSSO
   /** Simple SSO Configuration, less secure than "sso". See <a href="https://docs.fastcomments.com/guide-customizations-and-configuration.html#option-two---simple-sso" target="_blank">the documentation</a>. */
-  simpleSSO?: FastCommentsSSOSimple
+  simpleSSO?: FastCommentsSSOSimple,
+  /** Invoked when library initializes (nothing shown yet). **/
+  onInit: () => void,
+  /** Invoked when library renders content. Happens on any state change. **/
+  onRender: () => void,
+  /** Invoked when replying is successful. **/
+  onReplySuccess: (comment: Comment) => void,
+  /** Invoked when voting is successful. **/
+  onVoteSuccess: (comment: Comment, voteId: string, direction: 'up'|'down'|'deleted', status: 'success'|'pending-verification') => void,
 }
