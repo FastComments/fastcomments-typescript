@@ -74,11 +74,11 @@ export interface FastCommentsCommentWidgetConfig {
   /** Simple SSO Configuration, less secure than "sso". See <a href="https://docs.fastcomments.com/guide-customizations-and-configuration.html#option-two---simple-sso" target="_blank">the documentation</a>. */
   simpleSSO?: FastCommentsSSOSimple,
   /** Invoked when library initializes (nothing shown yet). **/
-  onInit: () => void,
+  onInit?: () => void,
   /** Invoked when library renders content. Happens on any state change. **/
-  onRender: () => void,
+  onRender?: () => void,
   /** Invoked when replying is successful. **/
-  onReplySuccess: (comment: Comment) => void,
+  onReplySuccess?: (comment: Comment) => void,
   /** Invoked when voting is successful. **/
-  onVoteSuccess: (comment: Comment, voteId: string, direction: 'up'|'down'|'deleted', status: 'success'|'pending-verification') => void,
+  onVoteSuccess?: (comment: Comment, voteId: string, direction: 'up'|'down'|'deleted', status: 'success'|'pending-verification') => void,
 }
