@@ -81,4 +81,8 @@ export interface FastCommentsCommentWidgetConfig {
   onReplySuccess?: (comment: Comment) => void,
   /** Invoked when voting is successful. **/
   onVoteSuccess?: (comment: Comment, voteId: string, direction: 'up'|'down'|'deleted', status: 'success'|'pending-verification') => void,
+  /** Invoked when clicking an image inside a comment. **/
+  onImageClicked?: (imageSrc: string) => void,
+  /** Disable the image redirect that occurs when clicking an image inside a comment. **/
+  disableImageRedirect?: boolean
 }
