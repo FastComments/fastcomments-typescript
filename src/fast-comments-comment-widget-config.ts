@@ -51,7 +51,7 @@ export interface FastCommentsCommentWidgetConfig {
   maxCommentCharacterLength?: number
   /** Don't use relative dates like "11 minutes ago". (Customizable via the UI.) */
   absoluteDates?: boolean
-  /** Show both relative and absolute dates "11 minutes ago (5/18/2021, 8:10:33 AM)". (Customizable via the UI.) */
+  /** Show both relative and absolute dates "11 minutes ago (5/18/2021)". (Customizable via the UI.) */
   absoluteAndRelativeDates?: boolean
   /** Text like "Show [count] comments". When defined we won't show the comment list. Instead show a link with the given text, which shows the comments upon clicking. (Customizable via the UI.) */
   hideCommentsUnderCountTextFormat?: string
