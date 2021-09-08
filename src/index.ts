@@ -1,3 +1,6 @@
 export { Comment } from './fast-comments-comment'
 export { FastCommentsCommentWidgetConfig, FastCommentsSSO } from './fast-comments-comment-widget-config'
 export { FastCommentsCommentCountConfig } from './fast-comments-comment-count-config'
+export { FastCommentsCollabChatWidgetConfig } from './fast-comments-collab-chat-widget-config'
+export { FastCommentsImageChatWidgetConfig } from './fast-comments-image-chat-widget-config'
+export { FastCommentsLiveChatWidgetConfig } from './fast-comments-live-chat-widget-config'
