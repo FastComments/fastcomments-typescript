@@ -63,8 +63,18 @@ export interface FastCommentsCommentWidgetConfig {
   noStyles?: boolean
   /** Disables email requirement. (Customizable via the UI.) */
   allowAnon?: boolean
+  /** Disables email/username requirement for votes. (Customizable via the UI.) */
+  allowAnonVotes?: boolean
+  /** Disables email inputs. (Customizable via the UI.) */
+  disableEmailInputs?: boolean
+  /** Disables the "Unverified Comment" label. (Customizable via the UI.) */
+  disableUnverifiedLabel?: boolean
+  /** The default value of the username field. (Customizable via the UI.) */
+  defaultUsername?: string
   /** Disables adding images. (Customizable via the UI.) */
   noImageUploads?: boolean
+  /** Disables the WYSIWYG toolbar. (Customizable via the UI.) */
+  disableToolbar?: boolean
   /** locale, valid values are 'en_us', 'es_es', 'fr_fr', 'pl_pl', 'de_de', 'it_it', 'ru_ru' */
   locale?: string
   /** Whether or not the comment count should include all comments instead of just the top-level ones */
