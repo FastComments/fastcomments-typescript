@@ -97,6 +97,12 @@ export interface FastCommentsCommentWidgetConfig {
   onImageClicked?: (imageSrc: string) => void,
   /** Disable the image redirect that occurs when clicking an image inside a comment. **/
   disableImageRedirect?: boolean,
+  /** Add new comments to the bottom of the widget, rather than the top. **/
+  newCommentsToBottom?: boolean,
+  /** By default collapse all replies. **/
+  collapseReplies?: boolean,
+  /** The maximum depth of comment threads (replies to replies). Zero disables replies to comments. **/
+  maxReplyDepth?: number,
   /** Disables live commenting. **/
   disableLiveCommenting?: boolean
 }
