@@ -96,5 +96,7 @@ export interface FastCommentsCommentWidgetConfig {
   /** Invoked when clicking an image inside a comment. **/
   onImageClicked?: (imageSrc: string) => void,
   /** Disable the image redirect that occurs when clicking an image inside a comment. **/
-  disableImageRedirect?: boolean
+  disableImageRedirect?: boolean,
+  /** Disables live commenting. **/
+  disableLiveCommenting?: boolean
 }
