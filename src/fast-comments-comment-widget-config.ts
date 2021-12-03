@@ -7,10 +7,18 @@ export interface FastCommentsSSO {
   verificationHash: string
   /** The timestamp of when the verificationHash was created. */
   timestamp: number
-  /** The logout URL for the user. If you define the SSO configuration, but not this, the logout link won't be shown. */
+
+  /** For the below - define either the URL or Callback based parameters. **/
+
+  /** The logout URL for the user. If you define the SSO configuration, but not this or logoutCallback, the logout button won't be shown. */
   logoutURL?: string
   /** The login URL for the user, which will show if they try to comment and they are not authenticated. */
   loginURL?: string
+
+  /** The logout callback for the user. If you define the SSO configuration, but not this or logoutURL, the logout link won't be shown. */
+  logoutCallback?: (instanceId: string) => void
+  /** The login callback for the user. This will cause a button to show when they are unauthenticated. Upon clicking, this will be invoked. */
+  loginCallback?: (instanceId: string) => void
 }
 
 export interface FastCommentsSSOSimple {
