@@ -26,8 +26,10 @@ export interface FastCommentsSSOSimple {
   username: string
   /** The user's email. We'll send welcome and verification emails to this address. **/
   email?: string
-  /** The user's avatar. **/
+  /** @deprecated Use avatar instead. **/
   avatarSrc?: string
+  /** The user's avatar. **/
+  avatar?: string
   /** The user's website, blog, or personal account page. We'll link their username to this. **/
   websiteUrl?: string
 }
