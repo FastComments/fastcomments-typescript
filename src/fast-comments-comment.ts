@@ -26,4 +26,5 @@ export interface Comment {
     userId: string,
     verified: boolean,
     votes: number,
+    domain?: string|null,
 }
