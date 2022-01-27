@@ -1,7 +1,32 @@
 import {Comment} from "./fast-comments-comment";
 
+export interface FastCommentsSSOUserData {
+    /** Required. 1k Characters Max. **/
+    id: string;
+    /** Required. 1k Characters Max. Note: Must be unique. **/
+    email: string;
+    /** Required. 1k Characters Max. Note: The username cannot be an email. Does not have to be unique. **/
+    username: string;
+    /** Optional. 3k Characters Max for URLs. Default is from gravatar based on email. Supports 64 encoded images, in which case the limit is 50k characters. **/
+    avatar?: string;
+    /** Optional. Default false. **/
+    optedInNotifications?: boolean;
+    /** Optional. 100 Characters Max. This label will be shown next to their name. Default is Administrator/Moderator when applicable. **/
+    displayLabel?: string;
+    /** Optional. 500 Characters Max. This will be shown instead of the username. **/
+    displayName?: string;
+    /** Optional. 2k Characters Max. The user's name will link to this. **/
+    websiteUrl?: string;
+    /** Optional. Up to 100 groups per user. A group id may not be longer than 50 characters. **/
+    groupIds?: string[];
+    /** Optional. Denotes the user as an administrator. **/
+    isAdmin?: boolean;
+    /** Optional. Denotes the user as a moderator. **/
+    isModerator?: boolean;
+}
+
 export interface FastCommentsSSO {
-  /** The user's data represented as JSON, and then Base64'd. Leave empty for an unauthenticated user. */
+  /** The user's data (FastCommentsSSOUserData) represented as JSON, and then Base64'd. Leave empty for an unauthenticated user. */
   userDataJSONBase64: string
   /** The HMAC-SHA256 hash of the userDataJSONBase64 field, using your secret key. Leave empty for an unauthenticated user. */
   verificationHash: string
