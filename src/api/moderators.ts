@@ -11,6 +11,7 @@ export interface FastCommentsAPIModerator {
     editedCount?: number;
     bannedCount?: number;
     createdAt: string;
+    moderationGroupIds?: string[];
 }
 
 export interface FastCommentsAPIModeratorCreateOrUpdate {
@@ -19,4 +20,5 @@ export interface FastCommentsAPIModeratorCreateOrUpdate {
     tenantId: string;
     userId?: string|null;
     acceptedInvite?: boolean;
+    moderationGroupIds?: string[];
 }
