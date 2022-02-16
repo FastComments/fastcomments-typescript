@@ -27,13 +27,18 @@ export interface FastCommentsAPITenantBillingInfo {
     country: string;
 }
 
+export enum TenantPaymentFrequency {
+    Monthly = 0,
+    Annually = 1
+}
+
 export interface FastCommentsAPITenant {
     id: string;
     name: string;
     email: string;
     signUpDate: number; // number due to "legacy" reasons
     packageId?: string | null;
-    paymentFrequency?: number; // tood
+    paymentFrequency?: TenantPaymentFrequency;
     billingInfoValid?: boolean;
     billingHandledExternally?: boolean;
     createdBy?: string;
