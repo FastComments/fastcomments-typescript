@@ -27,4 +27,5 @@ export interface Comment {
     verified: boolean,
     votes: number,
     domain?: string|null,
+    moderationGroupIds?: string[]|null,
 }
