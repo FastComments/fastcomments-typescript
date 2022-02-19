@@ -139,5 +139,11 @@ export interface FastCommentsCommentWidgetConfig {
   /** The maximum depth of comment threads (replies to replies). Zero disables replies to comments. **/
   maxReplyDepth?: number,
   /** Disables live commenting. **/
-  disableLiveCommenting?: boolean
+  disableLiveCommenting?: boolean,
+  /** Disables the success message after commenting. **/
+  disableSuccessMessage?: boolean,
+  /** EXPERIMENTAL: A list of small images to use for reactions. Requires experimentalWYSIWYG set to true. **/
+  inlineReactImages?: string[],
+  /** EXPERIMENTAL: Changes the textarea to a content editable div. Requires disableToolbar set to true. **/
+  experimentalWYSIWYG?: boolean
 }
