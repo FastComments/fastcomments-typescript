@@ -1,10 +1,10 @@
 {
   "name": "fastcomments-typescript",
-  "version": "1.6.4",
+  "version": "1.6.5",
   "description": "Common FastComments TypeScript Types",
   "author": "winrid",
   "license": "MIT",
-  "repository": "fastcomments/fastcomments-react",
+  "repository": "fastcomments/fastcomments-typescript",
   "main": "src/index.ts",
   "source": "src/index.ts",
   "scripts": {
