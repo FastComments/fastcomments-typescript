@@ -57,6 +57,8 @@ export interface FastCommentsAPITenant {
     autoApproveCommentOnVerification?: boolean;
     sendProfaneToSpam?: boolean;
     /** @readonly - Is calculated based on packageId. **/
+    hasAuditing?: boolean;
+    /** @readonly - Is calculated based on packageId. **/
     hasFlexPricing?: boolean;
     flexLastBilledAmount?: number;
 }
