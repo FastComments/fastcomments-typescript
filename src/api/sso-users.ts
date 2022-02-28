@@ -14,6 +14,7 @@ export interface FastCommentsAPISSOUser {
     isAdminAdmin?: string;
     isCommentModeratorAdmin?: string;
     groupIds?: string[];
+    isProfileActivityPrivate?: boolean;
 }
 
 export interface FastCommentsAPISSOUserCreateOrUpdate {
@@ -31,4 +32,5 @@ export interface FastCommentsAPISSOUserCreateOrUpdate {
     isAdminAdmin?: string;
     isCommentModeratorAdmin?: string;
     groupIds?: string[];
+    isProfileActivityPrivate?: boolean;
 }
