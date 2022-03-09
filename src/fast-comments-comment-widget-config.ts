@@ -124,12 +124,16 @@ export interface FastCommentsCommentWidgetConfig {
   onInit?: () => void,
   /** Invoked when library renders content. Happens on any state change. **/
   onRender?: () => void,
+  /** Invoked when the comment count changes. **/
+  commentCountUpdated?: (newCount: number) => void,
   /** Invoked when replying is successful. **/
   onReplySuccess?: (comment: Comment) => void,
   /** Invoked when voting is successful. **/
   onVoteSuccess?: (comment: Comment, voteId: string, direction: 'up'|'down'|'deleted', status: 'success'|'pending-verification') => void,
   /** Invoked when clicking an image inside a comment. **/
   onImageClicked?: (imageSrc: string) => void,
+  /** Invoked when trying to open a user's profile, like when clicking an avatar. Note that this won't remove the loading spinner, for that you'll have to send a profile-loaded event to the widget. **/
+  onOpenProfile?: (userId: string) => void,
   /** Disable the image redirect that occurs when clicking an image inside a comment. **/
   disableImageRedirect?: boolean,
   /** Add new comments to the bottom of the widget, rather than the top. **/
