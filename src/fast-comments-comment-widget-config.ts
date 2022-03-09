@@ -122,6 +122,8 @@ export interface FastCommentsCommentWidgetConfig {
   simpleSSO?: FastCommentsSSOSimple,
   /** Invoked when library initializes (nothing shown yet). **/
   onInit?: () => void,
+  /** Invoked when user authentication changes state. relatedData could be a user object on success events or the related data on failure, like the comment that was attempted to be submitted. **/
+  onAuthenticationChange?: (event: 'user-set' | 'session-id-set' | 'authentication-failed' | 'logout', relatedData: object) => void,
   /** Invoked when library renders content. Happens on any state change. **/
   onRender?: () => void,
   /** Invoked when the comment count changes. **/
