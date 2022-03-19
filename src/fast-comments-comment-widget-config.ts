@@ -116,6 +116,16 @@ export interface FastCommentsCommentWidgetConfig {
   countAll?: boolean
   /** Whether or not to show comments right away, without having to click "show N comments". */
   showLiveRightAway?: boolean
+  /** Whether or not to collect a link from the user when commenting (like their blog URL). */
+  enableCommenterLinks?: boolean
+  /** The default sort direction. 'MR'|null = Most Relevant, 'NF' = Newest First, 'OF' = Oldest First */
+  defaultSortDirection?: null | 'MR' | 'NF' | 'OF'
+  /** Change the comment input field to be a single line input instead of a textarea. */
+  useSingleLineCommentInput?: boolean
+  /** Puts pagination before the list of comments. The default is after. */
+  paginationBeforeComments?: boolean
+  /** Puts the date inline with the thumbs up/down toolbar. Requires custom styling to use, please reach out to support. */
+  showDateInline?: boolean
   /** SSO Configuration. For an unauthenticated user, do not define userDataJSONBase64 and verificationHash. See <a href="https://docs.fastcomments.com/guide-customizations-and-configuration.html#sso" target="_blank">the documentation</a>. */
   sso?: FastCommentsSSO
   /** Simple SSO Configuration, less secure than "sso". See <a href="https://docs.fastcomments.com/guide-customizations-and-configuration.html#option-two---simple-sso" target="_blank">the documentation</a>. */
