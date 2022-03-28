@@ -1,4 +1,5 @@
 export * from './audit-logs';
+export * from './comments';
 export * from './moderators';
 export * from './sso-users';
 export * from './tenant-daily-usage';
