@@ -144,8 +144,8 @@ export interface FastCommentsCommentWidgetConfig {
   onVoteSuccess?: (comment: Comment, voteId: string, direction: 'up'|'down'|'deleted', status: 'success'|'pending-verification') => void,
   /** Invoked when clicking an image inside a comment. **/
   onImageClicked?: (imageSrc: string) => void,
-  /** Invoked when trying to open a user's profile, like when clicking an avatar. **/
-  onOpenProfile?: (userId: string) => void,
+  /** Invoked when trying to open a user's profile, like when clicking an avatar. Return true to prevent loading spinner. **/
+  onOpenProfile?: (userId: string) => boolean,
   /** Disable the image redirect that occurs when clicking an image inside a comment. **/
   disableImageRedirect?: boolean,
   /** Add new comments to the bottom of the widget, rather than the top. **/
