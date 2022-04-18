@@ -1,7 +1,7 @@
 export interface FastCommentsAPISSOUser {
     id: string;
     username: string;
-    email: string;
+    email?: string;
     signUpDate: number;
     websiteUrl?: string;
     createdFromUrlId?: string;
@@ -21,7 +21,7 @@ export interface FastCommentsAPISSOUserCreateOrUpdate {
     id: string;
     username: string;
     websiteUrl?: string;
-    email: string;
+    email?: string;
     signUpDate: number;
     createdFromUrlId?: string;
     avatarSrc?: string;
