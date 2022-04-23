@@ -104,6 +104,8 @@ export interface FastCommentsCommentWidgetConfig {
   disableEmailInputs?: boolean
   /** Disables the "Unverified Comment" label. (Customizable via the UI.) */
   disableUnverifiedLabel?: boolean
+  /** Disables support for @mentions. */
+  disableMentions?: boolean
   /** The default value of the username field. (Customizable via the UI.) */
   defaultUsername?: string
   /** Disables adding images. (Customizable via the UI.) */
