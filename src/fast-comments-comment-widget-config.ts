@@ -165,5 +165,5 @@ export interface FastCommentsCommentWidgetConfig {
   /** EXPERIMENTAL: Changes the textarea to a content editable div. Requires disableToolbar set to true. **/
   experimentalWYSIWYG?: boolean,
   /** Clicking reply to a comment will re-use the root reply field. **/
-  useSingleReplyField?: string[]
+  useSingleReplyField?: boolean
 }
