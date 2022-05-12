@@ -166,4 +166,6 @@ export interface FastCommentsCommentWidgetConfig {
   experimentalWYSIWYG?: boolean,
   /** Clicking reply to a comment will re-use the root reply field. **/
   useSingleReplyField?: boolean
+  /** Enable infinite scrolling. For this to work, you have to have custom styles for the comment area (.comments css selector) to enable the scroll bars! **/
+  enableInfiniteScrolling?: boolean
 }
