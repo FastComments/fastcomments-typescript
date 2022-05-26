@@ -23,6 +23,8 @@ export interface FastCommentsSSOUserData {
     isAdmin?: boolean;
     /** Optional. Denotes the user as a moderator. **/
     isModerator?: boolean;
+    /** Optional, default true. Set to false to enable the "activity" tab in the user's profile. **/
+    isProfileActivityPrivate?: boolean;
 }
 
 export interface FastCommentsSSO {
