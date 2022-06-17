@@ -68,6 +68,8 @@ export interface FastCommentsCommentWidgetConfig {
   urlId?: string
   /** URL that represents the page, if you don't want to tie to the page url in the browser. Must always be a URL. */
   url?: string
+  /** The region your account is in. If your account was created via fastcomments.com, you can leave this undefined. EU customers will want to set it to 'eu'. Does not apply to VanillaJS widget. */
+  region?: 'eu';
   /** A path to the default avatar image, shown when the user has no avatar. When undefined, it defaults to "https://fastcomments.com/images/unknown-person.png". */
   defaultAvatarSrc?: string
   /** Whether or not the comment widget is on a page or element with a dark background. If undefined the widget will try to determine the background color itself. */
