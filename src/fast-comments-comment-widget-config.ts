@@ -104,8 +104,10 @@ export interface FastCommentsCommentWidgetConfig {
   absoluteDates?: boolean
   /** Show both relative and absolute dates "11 minutes ago (5/18/2021)". (Customizable via the UI.) */
   absoluteAndRelativeDates?: boolean
-  /** Text like "Show [count] comments". When defined we won't show the comment list. Instead show a link with the given text, which shows the comments upon clicking. (Customizable via the UI.) */
+  /** @Deprecated Text like "Show [count] comments". When defined we won't show the comment list. Instead show a link with the given text, which shows the comments upon clicking. (Customizable via the UI.) Retained for backwards compatibility - we suggest you use useShowCommentsToggle with custom translations, instead.*/
   hideCommentsUnderCountTextFormat?: string
+  /** Enables a "Show Comments" toggle button. Customize via translations.HIDE_COMMENTS_BUTTON_TEXT and translations.SHOW_COMMENTS_BUTTON_TEXT. */
+  useShowCommentsToggle?: string
   /** Header HTML. (Customizable via the UI.) */
   headerHTML?: boolean
   /** console.log time to create HTML for rendering. */
