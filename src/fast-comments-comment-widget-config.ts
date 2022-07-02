@@ -86,6 +86,10 @@ export interface FastCommentsCommentWidgetConfig {
   defaultAvatarSrc?: string
   /** Whether or not the comment widget is on a page or element with a dark background. If undefined the widget will try to determine the background color itself. */
   hasDarkBackground?: boolean
+  /** List of moderation group ids that the resulting comments will be associated with. */
+  moderationGroupIds?: string[]
+  /** The page we should render first when rendering the comments. Defaults to 0. -1 means to render all (up to 2k) comments. */
+  startingPage?: number
   /** Title of the page that the widget is on. */
   pageTitle?: string
   /** String used to compose the comment count. Use [count] to interpolate value. Default is "[count] comments on this page." (Customizable via the UI.) */
@@ -156,6 +160,8 @@ export interface FastCommentsCommentWidgetConfig {
   onAuthenticationChange?: (event: 'user-set' | 'session-id-set' | 'authentication-failed' | 'logout', relatedData: object) => void,
   /** Invoked when library renders content. Happens on any state change. **/
   onRender?: () => void,
+  /** Invoked when library renders comments. **/
+  onCommentsRendered?: (Comment: []) => void,
   /** Invoked when the comment count changes. **/
   commentCountUpdated?: (newCount: number) => void,
   /** Invoked when replying is successful. **/
@@ -186,4 +192,14 @@ export interface FastCommentsCommentWidgetConfig {
   useSingleReplyField?: boolean
   /** Enable infinite scrolling. For this to work, you have to have custom styles for the comment area (.comments css selector) to enable the scroll bars! **/
   enableInfiniteScrolling?: boolean
+  /** For user activity feeds ONLY. Set tenantId to 'all' and ssoTenantId to your tenant id. **/
+  userId?: string
+  /** For user activity feeds ONLY. **/
+  ssoTenantId?: string
+  /** Jump/scroll to a given comment by id. **/
+  jumpToId?: string
+  /** Custom API host. You probably want to use "region" instead. **/
+  apiHost?: string
+  /** Custom translations. It's recommended you use the widget customization UI instead. If you really want to use this, probably check with support first. **/
+  translations?: Record<string, string>
 }
