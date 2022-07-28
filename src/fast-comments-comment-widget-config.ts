@@ -1,4 +1,4 @@
-import {Comment} from "./fast-comments-comment";
+import {FastCommentsWidgetComment} from "./fast-comments-comment";
 
 export interface FastCommentsSSOUserData {
     /** Required. 1k Characters Max. **/
@@ -161,13 +161,13 @@ export interface FastCommentsCommentWidgetConfig {
   /** Invoked when library renders content. Happens on any state change. **/
   onRender?: () => void,
   /** Invoked when library renders comments. **/
-  onCommentsRendered?: (Comment: []) => void,
+  onCommentsRendered?: (comment: FastCommentsWidgetComment[]) => void,
   /** Invoked when the comment count changes. **/
   commentCountUpdated?: (newCount: number) => void,
   /** Invoked when replying is successful. **/
-  onReplySuccess?: (comment: Comment) => void,
+  onReplySuccess?: (comment: FastCommentsWidgetComment) => void,
   /** Invoked when voting is successful. **/
-  onVoteSuccess?: (comment: Comment, voteId: string, direction: 'up'|'down'|'deleted', status: 'success'|'pending-verification') => void,
+  onVoteSuccess?: (comment: FastCommentsWidgetComment, voteId: string, direction: 'up'|'down'|'deleted', status: 'success'|'pending-verification') => void,
   /** Invoked when clicking an image inside a comment. **/
   onImageClicked?: (imageSrc: string) => void,
   /** Invoked when trying to open a user's profile, like when clicking an avatar. Return true to prevent loading spinner. **/
@@ -200,6 +200,10 @@ export interface FastCommentsCommentWidgetConfig {
   jumpToId?: string
   /** Custom API host. You probably want to use "region" instead. **/
   apiHost?: string
+  /** Custom WS host. You probably want to use "region" instead. **/
+  wsHost?: string
+  /** Whether or not to use polling instead of WebSockets. Generally not recommended. The system will already use polling on reconnect to recover missed messages. **/
+  usePolling?: boolean
   /** Custom translations. It's recommended you use the widget customization UI instead. If you really want to use this, probably check with support first. **/
   translations?: Record<string, string>
 }
