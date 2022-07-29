@@ -14,6 +14,8 @@ export interface FastCommentsAPICommentCreateOrUpdate {
     /** The "display label" for the comment - for example "Admin", "Moderator", or something like "VIP User". **/
     displayLabel?: string;
     domain?: string|null;
+    /** The number of times the comment was flagged. **/
+    flagCount?: number;
     isPinned?: boolean;
     isSpam?: boolean;
     locale: 'de_de' | 'en_us' | 'es_es' | 'fr_fr' | 'it_it' | 'ja_jp' | 'ko_kr' | 'pl_pl' | 'pt_br' | 'ru_ru' | 'tr_tr' | 'zh_cn' | 'zh_tw';
