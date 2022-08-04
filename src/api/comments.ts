@@ -7,6 +7,8 @@ export interface FastCommentsAPICommentCreateOrUpdate {
     approved: boolean;
     avatarSrc?: string;
     comment: string;
+    /** Only during update. **/
+    commentHTML?: string;
     commenterEmail?: string;
     commenterLink?: string;
     commenterName: string;
