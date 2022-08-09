@@ -10,6 +10,7 @@ export interface FastCommentsWidgetComment {
     approved?: boolean; // this is only false upon submission, normally it is undefined
     avatarSrc?: string;
     badges?: FastCommentsBadge[];
+    /** Added on the client. **/
     children?: FastCommentsWidgetComment[];
     commentHTML: string;
     commenterLink?: string;
@@ -27,6 +28,8 @@ export interface FastCommentsWidgetComment {
     isVotedDown?: boolean;
     isVotedUp?: boolean;
     myVoteId?: string;
+    /** Added on the client. **/
+    nestedChildrenCount?: number;
     parentId?: string | null;
     userId?: string;
     verified: boolean;
