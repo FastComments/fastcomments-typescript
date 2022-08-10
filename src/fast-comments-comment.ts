@@ -18,11 +18,17 @@ export interface FastCommentsWidgetComment {
     date: string;
     displayLabel?: string;
     hasImages?: boolean;
+    /** Sometimes added on the client. **/
+    hidden?: boolean;
+    /** Sometimes added on the client (for new live child comments) **/
+    hiddenChildrenCount?: number;
     isBlocked?: boolean;
     isByAdmin?: boolean;
     isByModerator?: boolean;
     isDeleted?: boolean;
     isFlagged?: boolean;
+    /** Sometimes added on the client (for comments pushed to the client live). **/
+    isLive?: boolean;
     isPinned?: boolean;
     isSpam?: boolean;
     isVotedDown?: boolean;
