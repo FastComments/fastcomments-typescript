@@ -12,6 +12,9 @@ export interface FastCommentsWidgetComment {
     badges?: FastCommentsBadge[];
     /** Added on the client. **/
     children?: FastCommentsWidgetComment[];
+    /** Populated by the client in some scenarios like editing. **/
+    comment?: string;
+    /** Provided by the server. **/
     commentHTML: string;
     commenterLink?: string;
     commenterName?: string;
@@ -37,7 +40,11 @@ export interface FastCommentsWidgetComment {
     /** Added on the client. **/
     nestedChildrenCount?: number;
     parentId?: string | null;
+    /** Added on the client in some scenarios. Not usually present as an optimization (you already know the tenant you're in, usually). **/
+    tenantId?: string;
     userId?: string;
+    /** Added on the client in some scenarios. Not usually present as an optimization (you already know the page you're on, usually). **/
+    urlId?: string;
     verified: boolean;
     votes?: number;
     votesDown?: number;
