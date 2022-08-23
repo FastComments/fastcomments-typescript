@@ -29,11 +29,11 @@ export interface FastCommentsSSOUserData {
 
 export interface FastCommentsSSO {
   /** The user's data (FastCommentsSSOUserData) represented as JSON, and then Base64'd. Leave empty for an unauthenticated user. */
-  userDataJSONBase64: string
+  userDataJSONBase64?: string | null
   /** The HMAC-SHA256 hash of the userDataJSONBase64 field, using your secret key. Leave empty for an unauthenticated user. */
-  verificationHash: string
+  verificationHash?: string | null
   /** The timestamp of when the verificationHash was created. */
-  timestamp: number
+  timestamp?: number
 
   /** For the below - define either the URL or Callback based parameters. **/
 
