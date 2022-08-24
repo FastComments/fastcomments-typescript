@@ -210,4 +210,11 @@ export interface FastCommentsCommentWidgetConfig {
   usePolling?: boolean
   /** Custom translations. It's recommended you use the widget customization UI instead. If you really want to use this, probably check with support first. **/
   translations?: Record<string, string>
+  /** The product being used. You probably don't want to manual define this. **/
+  productId?: number
+  /** Meta data to tie to the comment. **/
+  commentMeta?: {
+    wpPostId?: string
+    wpUserId?: string
+  }
 }
