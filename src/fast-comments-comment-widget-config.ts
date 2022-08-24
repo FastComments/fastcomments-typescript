@@ -100,6 +100,8 @@ export interface FastCommentsCommentWidgetConfig {
   hideAvatars?: boolean
   /** Disable commenting for this page, but still show the comments. */
   readonly?: boolean
+  /** Only disable adding new root comments. Votes and threaded replies still allowed. */
+  noNewRootComments?: boolean
   /** Place the page-level comment reply at the bottom of the comment list. (Customizable via the UI.) */
   inputAfterComments?: boolean
   /** Maximum character length for a comment. Default is 2k characters. */
@@ -184,6 +186,8 @@ export interface FastCommentsCommentWidgetConfig {
   disableLiveCommenting?: boolean,
   /** Disables the success message after commenting. **/
   disableSuccessMessage?: boolean,
+  /** Disables the notification bell. **/
+  disableNotificationBell?: boolean,
   /** EXPERIMENTAL: A list of small images to use for reactions. Requires experimentalWYSIWYG set to true. **/
   inlineReactImages?: string[],
   /** EXPERIMENTAL: Changes the textarea to a content editable div. Requires disableToolbar set to true. **/
