@@ -188,6 +188,8 @@ export interface FastCommentsCommentWidgetConfig {
   disableSuccessMessage?: boolean,
   /** Disables the notification bell. **/
   disableNotificationBell?: boolean,
+  /** Disables voting and removes all vote counts. **/
+  disableVoting?: boolean,
   /** EXPERIMENTAL: A list of small images to use for reactions. Requires experimentalWYSIWYG set to true. **/
   inlineReactImages?: string[],
   /** EXPERIMENTAL: Changes the textarea to a content editable div. Requires disableToolbar set to true. **/
