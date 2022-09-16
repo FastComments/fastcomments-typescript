@@ -17,3 +17,17 @@ export enum FastCommentsSiteType {
     Unknown = 0,
     WordPress = 1
 }
+
+export enum NotificationType {
+    RepliedToMe = 0,
+    RepliedTransientChild = 1,
+    VotedMyComment = 2,
+    SubscriptionReplyRoot = 3,
+    CommentedOnProfile = 4,
+    DirectMessage = 5
+}
+
+export enum NotificationObjectType {
+    Comment = 0,
+    Profile = 1
+}
