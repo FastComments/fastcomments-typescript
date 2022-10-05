@@ -176,6 +176,8 @@ export interface FastCommentsCommentWidgetConfig {
   onImageClicked?: (imageSrc: string) => void,
   /** Invoked when trying to open a user's profile, like when clicking an avatar. Return true to prevent loading spinner. **/
   onOpenProfile?: (userId: string) => boolean,
+  /** The rating used for the gif picker. Also configurable via the widget customization UI. **/
+  gifRating?: 'g' | 'pg' | 'pg-13' | 'r',
   /** Disable the image redirect that occurs when clicking an image inside a comment. **/
   disableImageRedirect?: boolean,
   /** Add new comments to the bottom of the widget, rather than the top. **/
