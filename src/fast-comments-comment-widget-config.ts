@@ -186,6 +186,8 @@ export interface FastCommentsCommentWidgetConfig {
   collapseReplies?: boolean,
   /** The maximum depth of comment threads (replies to replies). Zero disables replies to comments. **/
   maxReplyDepth?: number,
+  /** A list of group ids to use for @mentions autocomplete. Useful when you want to prevent tagging users when they do not have intersecting groups. **/
+  mentionGroupIds?: string[],
   /** Disables live commenting. **/
   disableLiveCommenting?: boolean,
   /** Disables the success message after commenting. **/
