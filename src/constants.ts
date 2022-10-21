@@ -24,7 +24,8 @@ export enum NotificationType {
     VotedMyComment = 2,
     SubscriptionReplyRoot = 3,
     CommentedOnProfile = 4,
-    DirectMessage = 5
+    DirectMessage = 5,
+    Mentioned = 7,
 }
 
 export enum NotificationObjectType {
