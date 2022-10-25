@@ -1,4 +1,5 @@
 import {FastCommentsWidgetComment} from "./fast-comments-comment";
+import {VoteStyle} from "./constants";
 
 export interface FastCommentsSSOUserData {
     /** Required. 1k Characters Max. **/
@@ -229,4 +230,6 @@ export interface FastCommentsCommentWidgetConfig {
     wpPostId?: string
     wpUserId?: string
   }
+  /** How to style voting. Ideally you should customize this via the widget customization UI instead to enable server-side validations. **/
+  voteStyle?: VoteStyle
 }

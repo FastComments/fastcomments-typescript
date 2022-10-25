@@ -32,3 +32,8 @@ export enum NotificationObjectType {
     Comment = 0,
     Profile = 1
 }
+
+export enum VoteStyle {
+    UpDown = 0, // default
+    Heart = 1, // click heart to like
+}
