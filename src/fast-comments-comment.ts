@@ -21,6 +21,8 @@ export interface FastCommentsWidgetComment {
     date: string;
     displayLabel?: string;
     hasImages?: boolean;
+    /** The person that wrote the comment blocked the current user. **/
+    hasBlockedYou?: boolean;
     /** Sometimes added on the client. **/
     hidden?: boolean;
     /** Sometimes added on the client (for new live child comments) **/
