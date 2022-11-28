@@ -36,6 +36,8 @@ export interface FastCommentsWidgetComment {
     isLive?: boolean;
     isPinned?: boolean;
     isSpam?: boolean;
+    /** If the user is subscribed to the page or thread, and this comment triggers a notification, it will be set to true for only one page load so it can be highlighted. **/
+    isUnread?: boolean;
     isVotedDown?: boolean;
     isVotedUp?: boolean;
     myVoteId?: string;
