@@ -139,7 +139,7 @@ export interface FastCommentsCommentWidgetConfig {
   noImageUploads?: boolean
   /** Disables the WYSIWYG toolbar. (Customizable via the UI.) */
   disableToolbar?: boolean
-  /** locale, valid values are 'en_us', 'es_es', 'fr_fr', 'pl_pl', 'de_de', 'it_it', 'ru_ru' */
+  /** Locale to render the widget for. Valid values are: 'de_de' | 'en_us' | 'es_es' | 'fr_fr' | 'it_it' | 'ja_jp' | 'ko_kr' | 'pl_pl' | 'pt_br' | 'ru_ru' | 'tr_tr' | 'zh_cn' | 'zh_tw'. Note that this will become an enum in the future. */
   locale?: string
   /** Whether or not the comment count should include all comments instead of just the top-level ones */
   countAll?: boolean
