@@ -199,6 +199,8 @@ export interface FastCommentsCommentWidgetConfig {
   disableSuccessMessage?: boolean,
   /** Disables the notification bell. **/
   disableNotificationBell?: boolean,
+  /** Disables opening profiles when you click the user's avatar. **/
+  disableProfiles?: boolean,
   /** Disables voting and removes all vote counts. **/
   disableVoting?: boolean,
   /** EXPERIMENTAL: A list of small images to use for reactions. Requires experimentalWYSIWYG set to true. **/
