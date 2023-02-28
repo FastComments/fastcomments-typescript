@@ -4,7 +4,10 @@ import {CommentUserMention} from "../fast-comments-comment-mention";
 export interface FastCommentsAPIComment {
     aiDeterminedSpam?: false;
     approved: boolean;
+    /** A https path to an avatar. You can also use a base64 encoded string, but it's less efficient. **/
     avatarSrc?: string;
+    /** When calling the API with asTree=true, children may be populated. **/
+    children?: FastCommentsAPIComment[];
     comment: string;
     commentHTML: string;
     commenterEmail?: string;
@@ -61,6 +64,7 @@ export interface FastCommentsAPICommentCreateOrUpdate {
     domain?: string|null;
     /** The number of times the comment was flagged. **/
     flagCount?: number;
+    hashTags?: CommentHashTag[];
     isPinned?: boolean;
     isSpam?: boolean;
     locale: 'de_de' | 'en_us' | 'es_es' | 'fr_fr' | 'it_it' | 'ja_jp' | 'ko_kr' | 'pl_pl' | 'pt_br' | 'ru_ru' | 'tr_tr' | 'zh_cn' | 'zh_tw';
