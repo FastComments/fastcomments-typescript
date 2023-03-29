@@ -1,6 +1,7 @@
 export enum FastCommentsLocale {
     zh_cn = 'zh_cn',
     zh_tw = 'zh_tw',
+    hr_hr = 'hr_hr',
     en_us = 'en_us',
     fr_fr = 'fr_fr',
     de_de = 'de_de',

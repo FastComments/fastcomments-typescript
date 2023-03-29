@@ -140,7 +140,7 @@ export interface FastCommentsCommentWidgetConfig {
   /** Disables the WYSIWYG toolbar. (Customizable via the UI.) */
   disableToolbar?: boolean
   /** Locale to render the widget for. */
-  locale?: ('de_de' | 'en_us' | 'es_es' | 'fr_fr' | 'he' | 'it_it' | 'ja_jp' | 'ko_kr' | 'pl_pl' | 'pt_br' | 'ru_ru' | 'tr_tr' | 'zh_cn' | 'zh_tw') | string
+  locale?: ('hr_hr' | 'de_de' | 'en_us' | 'es_es' | 'fr_fr' | 'he' | 'it_it' | 'ja_jp' | 'ko_kr' | 'pl_pl' | 'pt_br' | 'ru_ru' | 'tr_tr' | 'zh_cn' | 'zh_tw') | string
   /** Whether or not the comment count should include all comments instead of just the top-level ones */
   countAll?: boolean
   /** Whether or not to show comments right away, without having to click "show N comments". */
