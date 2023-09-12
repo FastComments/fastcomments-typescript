@@ -183,6 +183,10 @@ export interface FastCommentsCommentWidgetConfig {
   onUserBlocked?: (userId: string, comment: FastCommentsWidgetComment, isBlocked: boolean) => void,
   /** Invoked when a user flags or un-flags a comment. userId is the user doing the flagging, and comment is the comment that was flagged/un-flagged. **/
   onCommentFlagged?: (userId: string, comment: FastCommentsWidgetComment, isFlagged: boolean) => void,
+  /** Invoked when a user edits a comment. userId is the user doing the editing, and comment is the comment that was edited. **/
+  onCommentEdited?: (userId: string, comment: FastCommentsWidgetComment) => void,
+  /** Invoked when a user deletes a comment. userId is the user doing the deleting, and comment is the comment that was deleted. **/
+  onCommentDeleted?: (userId: string, comment: FastCommentsWidgetComment) => void,
   /** Invoked when a user submits a comment. You must invoke the passed continue or cancel callbacks. Supports async behavior. **/
   onCommentSubmitStart?: (comment: FastCommentsWidgetComment, continueSubmitFn: () => void, cancelFn: () => void) => void,
   /** The rating used for the gif picker. Also configurable via the widget customization UI. **/
