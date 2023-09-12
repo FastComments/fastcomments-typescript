@@ -127,6 +127,8 @@ export interface FastCommentsCommentWidgetConfig {
   allowAnon?: boolean
   /** Disables email/username requirement for votes. (Customizable via the UI.) */
   allowAnonVotes?: boolean
+  /** Disables blocking. (Customizable via the UI.) */
+  disableBlocking?: boolean
   /** Disables email inputs. (Customizable via the UI.) */
   disableEmailInputs?: boolean
   /** Disables the "Unverified Comment" label. (Customizable via the UI.) */
