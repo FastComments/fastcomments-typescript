@@ -188,7 +188,7 @@ export interface FastCommentsCommentWidgetConfig {
   /** Invoked when a user deletes a comment. userId is the user doing the deleting, and comment is the comment that was deleted. **/
   onCommentDeleted?: (userId: string, comment: FastCommentsWidgetComment) => void,
   /** Invoked when a user submits a comment. You must invoke the passed continue or cancel callbacks. Supports async behavior. **/
-  onCommentSubmitStart?: (comment: FastCommentsWidgetComment, continueSubmitFn: () => void, cancelFn: () => void) => void,
+  onCommentSubmitStart?: (comment: FastCommentsWidgetComment, continueSubmitFn: () => void, cancelFn: (message?: string) => void) => void,
   /** The rating used for the gif picker. Also configurable via the widget customization UI. **/
   gifRating?: 'g' | 'pg' | 'pg-13' | 'r',
   /** Disable the image redirect that occurs when clicking an image inside a comment. **/
