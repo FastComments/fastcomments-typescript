@@ -1,5 +1,6 @@
 export * from './api'
 export * from './constants'
+export * from './constructors'
 export * from './fast-comments-collab-chat-widget-config'
 export * from './fast-comments-comment'
 export * from './fast-comments-badge'
