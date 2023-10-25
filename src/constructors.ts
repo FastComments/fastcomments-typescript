@@ -9,7 +9,7 @@ export interface FastCommentsWidgetEmbed {
     destroy: () => void
     update: (newConfig: FastCommentsCommentWidgetConfig) => FastCommentsUIReturnType
     updateUser: (newUser: FastCommentsLoggedInUser) => void
-    postMessage: (string) => void
+    postMessage: (message: string) => void
     openProfile: (request: OnOpenProfileRequest) => void
 }
 
