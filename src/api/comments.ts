@@ -19,6 +19,8 @@ export interface FastCommentsAPIComment {
     domain?: string|null;
     /** The number of times the comment was flagged. */
     flagCount?: number;
+    /** Only returned by the API when asTree=true. **/
+    hasChildren?: boolean;
     hashTags?: CommentHashTag[];
     hasImages?: boolean;
     hasLinks?: boolean;
