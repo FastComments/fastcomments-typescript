@@ -255,7 +255,7 @@ export interface FastCommentsCommentWidgetConfig {
     apiHost?: string
     /** Custom WS host. You probably want to use "region" instead. **/
     wsHost?: string
-    /** Whether or not to use polling instead of WebSockets. Generally not recommended. The system will already use polling on reconnect to recover missed messages. **/
+    /** Whether to use polling instead of WebSockets. Generally not recommended. The system will already use polling on reconnect to recover missed messages. **/
     usePolling?: boolean
     /** Custom translations. It's recommended you use the widget customization UI instead. If you really want to use this, probably check with support first. **/
     translations?: Record<string, string>
@@ -265,6 +265,7 @@ export interface FastCommentsCommentWidgetConfig {
     commentMeta?: {
         wpPostId?: string
         wpUserId?: string
+        [key: string]: string | number | null | undefined;
     }
     /** How to style voting. Ideally you should customize this via the widget customization UI instead to enable server-side validations. **/
     voteStyle?: VoteStyle
