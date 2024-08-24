@@ -100,6 +100,19 @@ export interface OnOpenProfileRequest {
     comment?: FastCommentsWidgetComment
 }
 
+export interface FastCommentsPageReactConfig {
+    /** A short id that represents the reaction (unique to your account, so you can use something like "happy"). **/
+    id: string
+    /** Image source path. Must be absolute **/
+    src: string
+    /** Optional selected image source path. Must be absolute. **/
+    selectedSrc?: string
+}
+
+export interface FastCommentsPageReactsConfig {
+    reacts: FastCommentsPageReactConfig[]
+}
+
 export interface FastCommentsCommentWidgetConfig {
     /** Id that represents you as a customer. */
     tenantId: string
@@ -267,6 +280,8 @@ export interface FastCommentsCommentWidgetConfig {
         wpUserId?: string
         [key: string]: string | number | null | undefined;
     }
+    /** Configuration for emoticons that show above the widget. **/
+    pageReactConfig?: FastCommentsPageReactsConfig
     /** How to style voting. Ideally you should customize this via the widget customization UI instead to enable server-side validations. **/
     voteStyle?: VoteStyle
 }
