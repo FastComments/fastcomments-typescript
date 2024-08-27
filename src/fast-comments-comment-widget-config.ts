@@ -182,12 +182,14 @@ export interface FastCommentsCommentWidgetConfig {
     disableToolbar?: boolean
     /** Locale to render the widget for. */
     locale?: ('hr_hr' | 'de_de' | 'en_us' | 'es_es' | 'fr_fr' | 'he' | 'it_it' | 'ja_jp' | 'ko_kr' | 'pl_pl' | 'pt_br' | 'ru_ru' | 'tr_tr' | 'zh_cn' | 'zh_tw') | string
-    /** Whether or not the comment count should include all comments instead of just the top-level ones */
+    /** Whether the comment count should include all comments instead of just the top-level ones */
     countAll?: boolean
-    /** Whether or not to show comments right away, without having to click "show N comments". */
+    /** Whether to show comments right away, without having to click "show N comments". */
     showLiveRightAway?: boolean
-    /** Whether or not to collect a link from the user when commenting (like their blog URL). */
+    /** Whether to collect a link from the user when commenting (like their blog URL). */
     enableCommenterLinks?: boolean
+    /** Whether to track and show comment viewed counts on each comment. */
+    enableViewCounts?: boolean
     /** The default sort direction. 'MR'|null = Most Relevant, 'NF' = Newest First, 'OF' = Oldest First */
     defaultSortDirection?: null | 'MR' | 'NF' | 'OF'
     /** Change the comment input field to be a single line input instead of a textarea. */
