@@ -111,6 +111,7 @@ export interface FastCommentsPageReactConfig {
 
 export interface FastCommentsPageReactsConfig {
     reacts: FastCommentsPageReactConfig[]
+    showUsers?: boolean
 }
 
 export interface FastCommentsCommentWidgetConfig {
