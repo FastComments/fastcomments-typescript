@@ -5,16 +5,21 @@
   "author": "winrid",
   "license": "MIT",
   "repository": "fastcomments/fastcomments-typescript",
-  "main": "src/index.ts",
-  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
     "check": "npm run lint && npm run compile",
-    "lint": "eslint . --ext .ts",
+    "lint": "eslint src --ext .ts",
     "compile": "tsc"
   },
   "devDependencies": {
-    "typescript": "^4.5.5",
-    "@typescript-eslint/parser": "^5.10.2",
-    "@typescript-eslint/eslint-plugin": "^5.10.2"
+    "eslint": "^8.57.1",
+    "@typescript-eslint/eslint-plugin": "^8.19.0",
+    "@typescript-eslint/parser": "^8.19.0",
+    "typescript": "^5.7.2"
   }
 }

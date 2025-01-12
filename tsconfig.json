@@ -1,6 +1,14 @@
 {
   "compilerOptions": {
-    "noEmit": true,
+    "declaration": true,
+    "outDir": "dist",
+    "module": "commonjs", // or "esnext" depending on your target
+    "target": "es2020", // or another target
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "esModuleInterop": true,
     "noImplicitAny": true
-  }
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
 }
