@@ -257,6 +257,7 @@ export interface FastCommentsCommentWidgetConfig {
     inlineReactImages?: string[],
     /** EXPERIMENTAL: Changes the textarea to a content editable div. Requires disableToolbar set to true. **/
     experimentalWYSIWYG?: boolean,
+    enableWYSIWYG?: boolean,
     /** Clicking reply to a comment will re-use the root reply field. **/
     useSingleReplyField?: boolean
     /** Enable infinite scrolling. For this to work, you have to have custom styles for the comment area (.comments css selector) to enable the scroll bars! **/
@@ -289,4 +290,18 @@ export interface FastCommentsCommentWidgetConfig {
     voteStyle?: VoteStyle
     /** Internal instance id. This is set by the library. You can read it, but you shouldn't set it. **/
     readonly instanceId?: string
+    /** Load comments filtered by a given hashtag. **/
+    jumpToHashTag?: string
+    /** You can specify a list of extensions to load by id, or specify a path to load a custom extension script. **/
+    extensions?: {id: string, path?: string}[]
+    /** Tell the library to not fetch the widget config from the server. **/
+    noCustomConfig?: boolean
+    /** Show list of users that voted on a comment when hovering over the vote button. Must be enabled in the dashboard so the server will pass the values (so who voted is not exposed by default). **/
+    enableVoteList?: boolean
+    /** Whether to wrap the widget in a container with a background/border/shadow, rather than the default transparent background. Will get set to true by default based on the derived background of the widget, unless explicitly set to false. **/
+    wrap?: boolean
+    /** Enables a search box to search for comments on the current page. **/
+    enableSearch?: boolean
+    /** Ignore the comment menu when determining the widget height. By default, we will increase the widget height (the iframe height) when the menu opens if needed. **/
+    ignoreCommentMenuHeight?: boolean
 }
