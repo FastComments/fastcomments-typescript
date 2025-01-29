@@ -287,4 +287,6 @@ export interface FastCommentsCommentWidgetConfig {
     pageReactConfig?: FastCommentsPageReactsConfig
     /** How to style voting. Ideally you should customize this via the widget customization UI instead to enable server-side validations. **/
     voteStyle?: VoteStyle
+    /** Internal instance id. This is set by the library. You can read it, but you shouldn't set it. **/
+    readonly instanceId?: string
 }
