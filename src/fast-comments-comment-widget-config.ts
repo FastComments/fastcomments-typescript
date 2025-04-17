@@ -1,6 +1,16 @@
 import {FastCommentsWidgetComment} from "./fast-comments-comment";
 import {VoteStyle} from "./constants";
 
+/**
+ * Badges are defined in the admin dashboard with images, text, and CSS. You can then pass their IDs here.
+ */
+export interface FastCommentsSSOBadgeConfig {
+    /** Ensure the user has these badges displayed. Additive, unless override is set. **/
+    badgeIds: string[];
+    /** Force-override any badges the user has set to display. **/
+    override?: boolean;
+}
+
 export interface FastCommentsSSOUserData {
     /** Required. 1k Characters Max. **/
     id: string;
@@ -26,6 +36,8 @@ export interface FastCommentsSSOUserData {
     isModerator?: boolean;
     /** Optional, default true. Set to false to enable the "activity" tab in the user's profile. **/
     isProfileActivityPrivate?: boolean;
+    /** Optional, specify the badges the user has. **/
+    badgeConfig?: FastCommentsSSOBadgeConfig;
 }
 
 export interface FastCommentsSSO {
@@ -60,6 +72,8 @@ export interface FastCommentsSSOSimple {
     avatar?: string
     /** The user's website, blog, or personal account page. We'll link their username to this. **/
     websiteUrl?: string
+    /** Optional, specify the badges the user has. **/
+    badgeConfig?: FastCommentsSSOBadgeConfig;
 
     /** For the below - define either the URL or Callback based parameters. **/
 
