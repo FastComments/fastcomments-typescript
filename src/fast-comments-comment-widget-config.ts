@@ -268,6 +268,8 @@ export interface FastCommentsCommentWidgetConfig {
     /** Disables voting and removes all vote counts. **/
     disableVoting?: boolean,
     inlineReactImages?: string[],
+    /** Legacy flag for switching to a WYSIWYG editor. **/
+    experimentalWYSIWYG?: boolean,
     /** Switches to a WYSIWYG editor. **/
     enableWYSIWYG?: boolean,
     /** Shows a resize handle in the bottom right. **/
