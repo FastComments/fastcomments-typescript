@@ -267,11 +267,11 @@ export interface FastCommentsCommentWidgetConfig {
     disableProfiles?: boolean,
     /** Disables voting and removes all vote counts. **/
     disableVoting?: boolean,
-    /** EXPERIMENTAL: A list of small images to use for reactions. Requires experimentalWYSIWYG set to true. **/
     inlineReactImages?: string[],
-    /** EXPERIMENTAL: Changes the textarea to a content editable div. Requires disableToolbar set to true. **/
-    experimentalWYSIWYG?: boolean,
+    /** Switches to a WYSIWYG editor. **/
     enableWYSIWYG?: boolean,
+    /** Shows a resize handle in the bottom right. **/
+    enableResizeHandle?: boolean,
     /** Clicking reply to a comment will re-use the root reply field. **/
     useSingleReplyField?: boolean
     /** Enable infinite scrolling. For this to work, you have to have custom styles for the comment area (.comments css selector) to enable the scroll bars! **/
