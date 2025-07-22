@@ -320,4 +320,6 @@ export interface FastCommentsCommentWidgetConfig {
     enableSearch?: boolean
     /** Ignore the comment menu when determining the widget height. By default, we will increase the widget height (the iframe height) when the menu opens if needed. **/
     ignoreCommentMenuHeight?: boolean
+    /** Shows the user's current badges next to their username. **/
+    showBadgesInTopBar?: boolean
 }
