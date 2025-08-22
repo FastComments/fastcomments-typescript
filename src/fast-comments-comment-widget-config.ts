@@ -201,6 +201,8 @@ export interface FastCommentsCommentWidgetConfig {
     countAll?: boolean
     /** Whether to show comments right away, without having to click "show N comments". */
     showLiveRightAway?: boolean
+    /** Whether to always connect to the socket, even if the element is not visible. Helps with some live commenting bugs in some frameworks if the widget is 0 height etc. */
+    alwaysConnect?: boolean
     /** Whether to collect a link from the user when commenting (like their blog URL). */
     enableCommenterLinks?: boolean
     /** Whether to track and show comment viewed counts on each comment. */
@@ -216,7 +218,7 @@ export interface FastCommentsCommentWidgetConfig {
     /** SSO Configuration. For an unauthenticated user, do not define userDataJSONBase64 and verificationHash. See <a href="https://docs.fastcomments.com/guide-customizations-and-configuration.html#sso" target="_blank">the documentation</a>. */
     sso?: FastCommentsSSO
     /** Simple SSO Configuration, less secure than "sso". See <a href="https://docs.fastcomments.com/guide-customizations-and-configuration.html#option-two---simple-sso" target="_blank">the documentation</a>. */
-    simpleSSO?: FastCommentsSSOSimple,
+    simpleSSO?: FastCommentsSSOSimple | null,
     /** Invoked when library initializes (nothing shown yet). **/
     onInit?: () => void,
     /** Invoked when user authentication changes state. relatedData could be a user object on success events or the related data on failure, like the comment that was attempted to be submitted. **/
