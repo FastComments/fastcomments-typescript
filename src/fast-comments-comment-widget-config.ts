@@ -64,6 +64,8 @@ export interface FastCommentsSSO {
 export interface FastCommentsSSOSimple {
     /** This must be unique when paired with an email. */
     username?: string
+    /** Optional. 500 Characters Max. This will be shown instead of the username. **/
+    displayName?: string;
     /** The user's email. We'll send welcome and verification emails to this address. **/
     email?: string
     /** @deprecated Use avatar instead. **/
