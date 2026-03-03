@@ -5,10 +5,14 @@ import {VoteStyle} from "./constants";
  * Badges are defined in the admin dashboard with images, text, and CSS. You can then pass their IDs here.
  */
 export interface FastCommentsSSOBadgeConfig {
-    /** Ensure the user has these badges displayed. Additive, unless override is set. **/
+    /** Ensure the user has these badges displayed. Additive, unless override is set. These are global badges visible on all pages. **/
     badgeIds: string[];
-    /** Force-override any badges the user has set to display. **/
+    /** Badges scoped to the request's urlId. Only displayed on the page they were assigned on. **/
+    pageBadgeIds?: string[];
+    /** Force-override any badges the user has set to display. Global and page-scoped badges are overridden independently. **/
     override?: boolean;
+    /** Force-update any badge changes from the tenant (changed text, images) to the user. **/
+    update?: boolean;
 }
 
 export interface FastCommentsSSOUserData {
