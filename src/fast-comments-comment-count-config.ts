@@ -9,4 +9,6 @@ export interface FastCommentsCommentCountConfig {
   numberOnly?: boolean
   /** Set the count as being live. Default is false. */
   isLive?: boolean
+  /** Set to true if embedding on a dark background. Auto-detected if not set. Adds a 'dark' class to the rendered output and injects a white-text style. */
+  hasDarkBackground?: boolean
 }
