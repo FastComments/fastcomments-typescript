@@ -286,6 +286,10 @@ export interface FastCommentsCommentWidgetConfig {
     useSingleReplyField?: boolean
     /** Enable infinite scrolling. For this to work, you have to have custom styles for the comment area (.comments css selector) to enable the scroll bars! **/
     enableInfiniteScrolling?: boolean
+    /** Show a list of users who have commented on the page or are currently viewing it. 0 (or omitted) = off, 1 = top facepile, 2 = left sidebar, 3 = right sidebar. **/
+    usersListLocation?: number
+    /** When the users list is enabled, also include past commenters who are not currently online. Defaults to false (online viewers only). **/
+    usersListIncludeOffline?: boolean
     /** For user activity feeds ONLY. Set tenantId to 'all' and ssoTenantId to your tenant id. **/
     userId?: string
     /** For user activity feeds ONLY. **/
