@@ -199,6 +199,10 @@ export interface FastCommentsCommentWidgetConfig {
     defaultUsername?: string
     /** Disables adding images. (Customizable via the UI.) */
     noImageUploads?: boolean
+    /** Allows trusted iframe embeds (YouTube, SoundCloud, etc.) in comments. (Customizable via the UI.) */
+    allowEmbeds?: boolean
+    /** Extra iframe hostnames to allow for embeds, beyond the built-in trusted providers. (Customizable via the UI.) */
+    allowedEmbedDomains?: string[] | null
     /** Disables the WYSIWYG toolbar. (Customizable via the UI.) */
     disableToolbar?: boolean
     /** Locale to render the widget for. */
